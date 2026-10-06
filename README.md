@@ -8,6 +8,15 @@ An end-to-end, clinically explainable deep learning CADx system for lung nodule 
 
 ---
 
+## 💾 Dataset & Source Links
+
+The benchmark evaluation is conducted on the public **LIDC-IDRI** (Lung Image Database Consortium and Image Database Resource Initiative) cohort:
+
+- **Kaggle Dataset Source:** [LIDC-IDRI on Kaggle (washingtongold/lidcidri30)](https://www.kaggle.com/datasets/washingtongold/lidcidri30)
+- **Official TCIA Archive:** [The Cancer Imaging Archive (TCIA) LIDC-IDRI Collection](https://wiki.cancerimagingarchive.net/display/Public/LIDC-IDRI)
+
+---
+
 ## 📌 Key Highlights & Contributions
 
 - **Adaptive Quality Assessment (AQA):** Dynamically measures scan-specific noise standard deviation ($\sigma$) from ambient air ($-1150$ to $-800$ HU) and calibrates edge-preserving bilateral filtering ($d=3/5$) and CLAHE, preserving delicate malignant spiculation while eliminating quantum mottle.
@@ -77,4 +86,39 @@ Evaluated across **441 consensus-verified nodule volumes** (188 Benign, 253 Mali
                ┌──────────────────────────────────────────┐
                │ Output: P(Malignancy) [0.0, 1.0]         │
                └──────────────────────────────────────────┘
+```
+
+---
+
+## 📁 Repository Structure
+
+```
+├── Results/
+│   ├── AQA_preprocessed_img.png        # Adaptive Quality Assessment comparison
+│   ├── validation_curve_roc_AUC.png    # 5-Fold validation AUC & Focal Loss trajectories
+│   ├── AUC&matrix.png                  # 5-Fold ROC curves & calibrated confusion matrix
+│   ├── grad-CAM.png                    # 5-Column multi-planar 3D Grad-CAM interpretability
+│   └── model_architecture.jpg          # Model architecture blueprint diagram
+├── requirements.txt                    # Project dependencies
+├── .gitignore                          # Git ignore configuration
+└── README.md                           # Project documentation
+```
+
+*(Note: The full end-to-end execution notebook will be updated in an upcoming commit).*
+
+---
+
+## 🚀 Installation & Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/Yashyashwanth07/lung-nodule-malignancy.git
+cd lung-nodule-malignancy
+
+# Create a virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
 ```
