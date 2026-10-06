@@ -1,0 +1,32 @@
+# Python / Jupyter
+__pycache__/
+*.py[cod]
+*$py.class
+*.ipynb_checkpoints
+.ipynb_checkpoints/
+
+# Exclude notebooks per user instruction ("we will add the notebook later")
+*.ipynb
+
+# Heavy Datasets & DICOM Scans
+Dataset/
+notebooks/
+*.dcm
+*.tcia
+
+# Reference Papers & Personal Office Documents (Heavy PDFs and Office files)
+paper*.pdf
+cureus_basepaper.pdf
+*.docx
+*.pptx
+
+# Logs & Temporary Files
+*.log
+notebook_logs.txt
+
+# OS / Windows / IDE Artifacts
+desktop.ini
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
