@@ -116,12 +116,3 @@ pip install -r requirements.txt
 ```
 
 ---
-
-## 👥 Authors & Academic Affiliation
-* **Department of Artificial Intelligence**, Amrita Vishwa Vidyapeetham
-* **Supervisor:** Dr. Gayathri Parasa
-* **Batch Members:**
-  - Dasari Sree
-  - P. Akshay Velangani
-  - Y.R.G. Karthikeya
-  - B. Yashwanthkumar
